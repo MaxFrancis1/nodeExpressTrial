@@ -84,3 +84,29 @@ footer {
     background-color: #333;
     text-align: center;
 }
+
+.dish-container {
+    width: 100%;
+    padding: 2vw 1vw;
+    margin: 1vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.dish {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 1vw;
+}
+
+/* .dish h3 {
+    font-size: 20px;
+} */
+
+.dish .ingredients {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* .dish p {
+    font-size: 20px;
+} */
