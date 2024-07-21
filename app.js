@@ -1,5 +1,7 @@
 var express = require("express");
-var indexRouter = require('./routes/index.js')
+var expressLayouts = require("express-ejs-layouts");
+var indexRouter = require('./routes/index.js');
+var aboutRouter = require('./routes/about.js');
 
 //app setup
 var app = express();
@@ -8,9 +10,11 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static("public"));
+app.use(expressLayouts);
 
 //Routes
 app.use("/", indexRouter);
+app.use("/about", aboutRouter);
 
 app.listen(3000, () => {
     console.log('Express is running on port 3000')
